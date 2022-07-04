@@ -1,0 +1,56 @@
+<mvc:View
+	controllerName="sap.ui.table.sample.Basic.Controller"
+	xmlns="sap.ui.table"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:u="sap.ui.unified"
+	xmlns:c="sap.ui.core"
+	xmlns:m="sap.m"
+    height="100%">
+	<m:Page
+		showHeader="false"
+		enableScrolling="false"
+		class="sapUiContentPadding">
+		<m:content>
+			<Table
+				rows="{/TodoCollection}"
+				selectionMode="MultiToggle"
+				visibleRowCount="10"
+				
+				ariaLabelledBy="title">
+				<extension>
+					<m:OverflowToolbar style="Clear">
+						<m:Title id="title" text="Rest - todo"/>
+					</m:OverflowToolbar>
+				</extension>
+				<columns>
+					<Column width="11rem"  hAlign="Center">
+						<m:Label text="USER ID" />
+						<template>
+							<m:Text text="{userId}" wrapping="false" />
+						</template>
+					</Column>
+					<Column width="11rem"  hAlign="Center">
+						<m:Label text="Id" />
+						<template>
+							<m:Title text="{id}"/>
+						</template>
+					</Column>
+					<Column width="50rem">
+						<m:Label text="Título" />
+						<template>
+							<m:Title text="{title}" />
+						</template>
+					</Column>
+					<Column width="11rem" hAlign="Center" id="col4">
+						<m:Label text="Status" />
+						<template>
+							<m:CheckBox selected="{
+								path: 'completed'
+							}" select="onClickCol()"/>
+						</template>
+					</Column>
+				</columns>
+			</Table>
+		</m:content>
+	</m:Page>
+</mvc:View>

@@ -1,0 +1,21 @@
+{
+  "name": "sap.ui.table.sample.basic",
+  "version": "1.0.0",
+  "author": "",
+  "description": "ui5 teste",
+  "scripts": {
+    "start": "ui5 serve",
+    "build": "ui5 build"
+  },
+  "dependencies": {
+    "@openui5/sap.m": "^1",
+    "@openui5/sap.ui.table": "^1",
+    "@openui5/themelib_sap_fiori_3": "^1"
+  },
+  "devDependencies": {
+    "@ui5/cli": "^2.14.9"
+  },
+  "main": "Component.js",
+  "keywords": [],
+  "license": "MIT"
+}
